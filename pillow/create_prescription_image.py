@@ -135,8 +135,8 @@ class CreatePrescriptionImage:
         # image.paste(company_img, (530, 627),  mask=company_img)
         doctor_sign_img = self._base64_to_image(pms.sign.doctor_sign)
         image.paste(doctor_sign_img, (62, 695),  mask=doctor_sign_img)
-        pharmacist_sign_img = self._base64_to_image(pms.sign.pharmacist_sign)
-        image.paste(pharmacist_sign_img, (245, 695),  mask=pharmacist_sign_img)
+        # pharmacist_sign_img = self._base64_to_image(pms.sign.pharmacist_sign)
+        # image.paste(pharmacist_sign_img, (245, 695),  mask=pharmacist_sign_img)
         draw.rectangle(xy=(0, 0, 750, 860), fill=None, outline="#F9F9F9", width=20)
         image.show()
 
