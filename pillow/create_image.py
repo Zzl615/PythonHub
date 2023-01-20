@@ -2,7 +2,7 @@
 # @Author: Noaghzil
 # @Date:   2023-01-10 08:15:53
 # @Last Modified by:   Noaghzil
-# @Last Modified time: 2023-01-20 18:09:28
+# @Last Modified time: 2023-01-20 18:11:41
 import re
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
@@ -67,6 +67,10 @@ class ImageExample:
         # 绘制横向虚线
         y_pos_list = [(10, 180), (750, 180)]
         draw_grid_transverse_line(draw, y_pos_list, fill="#E7E7E7", width=1, gap=5)
+
+        # 绘制矩形
+        draw.rectangle(xy=(0, 0, 750, 860), fill=None, outline="#F9F9F9", width=20)
+
         image.show()
 
 
