@@ -2,7 +2,7 @@
 # @Author: Noaghzil
 # @Date:   2023-01-10 08:15:53
 # @Last Modified by:   Noaghzil
-# @Last Modified time: 2023-01-20 08:41:22
+# @Last Modified time: 2023-01-20 18:09:28
 import re
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
@@ -42,6 +42,7 @@ def draw_grid_transverse_line(draw, pos_list, fill, width, gap):
     """
     x_begin, y_begin = pos_list[0]
     x_end, y_end = pos_list[1]
+    # 虚线的开始和结束位置，每一段的长度
     for x in range(x_begin, x_end, gap):
         draw.line([(x, y_begin), (x + gap / 2, y_begin)], fill=fill, width=width)
 
