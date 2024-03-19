@@ -24,6 +24,15 @@ async def main():
 
     pending = (task_1, task_2, task_3)
 
+    # This is a bug log
+    # calling API 1..., waiting for 1 seconds
+    # calling API 2..., waiting for 5 seconds
+    # calling API 3..., waiting for 5 seconds
+    # got result 1
+    # waiting for 2 tasks
+    # got result 2
+    # waiting for 0 tasks
+
     while pending:
         done, pending = await asyncio.wait(
             pending,
