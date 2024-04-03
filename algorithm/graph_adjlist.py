@@ -45,3 +45,20 @@ class GraphAdjList:
         for vertex in self.adj_map:
             count += len(self.adj_map[vertex])
         return count // 2
+
+def test_gragh_adjlist():
+    graph = GraphAdjList([[0, 1], [0, 2], [1, 2], [1, 3], [2, 3]])
+    assert graph.vertex_count == 4
+    assert graph.edge_count == 5
+    print(graph.adj_map)
+    graph.remove_edge(1, 2)
+    assert graph.edge_count == 4
+    print(graph.adj_map)
+    graph.remove_vertex(1)
+    print(graph.adj_map)
+    assert graph.vertex_count == 3
+    assert graph.edge_count == 2
+    print(graph.adj_map)
+
+if __name__ == "__main__":
+    test_gragh_adjlist()
